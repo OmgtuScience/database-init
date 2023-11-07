@@ -1,0 +1,16 @@
+spring:
+  liquibase:
+    change-log: db/changelog/changelog.sql
+    enabled: true
+    clear-checksums: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: false
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/science
+    username:
+    password:
